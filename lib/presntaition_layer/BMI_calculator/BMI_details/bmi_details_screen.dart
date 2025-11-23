@@ -319,6 +319,7 @@ class BMIInfoWidget extends StatelessWidget {
   }
 }
 
+
 class BMIResultWidget extends StatelessWidget {
   const BMIResultWidget({
     super.key,

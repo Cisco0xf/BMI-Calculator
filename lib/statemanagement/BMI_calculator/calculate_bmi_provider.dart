@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:bmi/commons/navigation_key.dart';
 import 'package:bmi/commons/show_toastification.dart';
+import 'package:bmi/constants/texts.dart';
 import 'package:bmi/presntaition_layer/BMI_calculator/BMI_details/bmi_details_screen.dart';
 import 'package:bmi/statemanagement/BMI_calculator/get_bmi_height_provider.dart';
 import 'package:flutter/material.dart';
@@ -53,48 +54,35 @@ class BMIProvider {
     int height = userHeight.userHeight;
 
     if (userWeight == 0 || userAge == 0) {
-      showToastification(
-        title: "User age and weight must be above 0",
-        type: ToastificationType.warning,
-      );
+      showToastification(title: aboveZ, type: ToastificationType.warning);
       return;
     }
 
     if (userWeight == 0 || userWeight > 250) {
-      showToastification(
-        title: "Please insert valide wight",
-        type: ToastificationType.error,
-      );
+      showToastification(title: validWeight, type: ToastificationType.warning);
       return;
     }
 
     if (userAge == 0 || userAge >= 130) {
-      showToastification(
-        title: "Please insert valide age",
-        type: ToastificationType.error,
-      );
+      showToastification(title: validAge, type: ToastificationType.warning);
       return;
     }
 
     double heightM = height / 100;
 
     double calcultedBMI = userWeight / (heightM * heightM);
+
     String bmiRounded = calcultedBMI.toStringAsFixed(2);
+
     userBMI = double.parse(bmiRounded);
 
     if (userBMI <= 12) {
-      showToastification(
-        title: "BMI value is too low, please check the inserted values",
-        type: ToastificationType.error,
-      );
+      showToastification(title: tooLow, type: ToastificationType.warning);
       return;
     }
 
     if (userBMI >= 60) {
-      showToastification(
-        title: "BMI value is too high, please check the inserted values",
-        type: ToastificationType.error,
-      );
+      showToastification(title: tooHigh, type: ToastificationType.warning);
       return;
     }
 
