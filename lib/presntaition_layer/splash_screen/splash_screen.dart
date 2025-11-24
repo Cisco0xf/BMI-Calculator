@@ -19,9 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
       const Duration(seconds: 3),
       () {
         Navigator.of(navigatorKey.currentContext!).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => const BMIMainScreen(),
-          ),
+          MaterialPageRoute(builder: (context) => const BMIMainScreen()),
         );
       },
     );
