@@ -1,16 +1,86 @@
-# bmi
+# BMI Calculator
 
-A new Flutter project.
+**Body Mass Index (BMI) Calculator built with Flutter && Provider**
 
-## Getting Started
+<div align="center">
+  <img width="300" height="300" alt="playstore" src="https://github.com/user-attachments/assets/22aad5b6-2952-4dff-a52e-fb3c2c1d0ee6" />
+<div align="center">
 
-This project is a starting point for a Flutter application.
+<p align="center">
+   BMI Calculator | By Mahmoud Alshehyby
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+<div align="start">
+  
+## Code structure:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```text
+lib/
+├── main.dart                      # Application entry point
+├── commons/                       # Common utilities & helpers
+│   ├── app_dimensions.dart
+│   ├── my_logger.dart
+│   ├── navigation_key.dart
+│   ├── pop_widget.dart
+│   └── show_toastification.dart
+├── constants/                     # App-wide constants
+│   ├── app_colors.dart
+│   ├── app_fonts.dart
+│   ├── assets.dart
+│   ├── gaps.dart
+│   └── texts.dart
+└── presentation_layer/            # UI & Presentation Code
+    ├── splash_screen/
+    │   └── splash_screen.dart
+    └── BML_calculator/            # Main BMI feature
+        ├── BML_screen/            # Input Screen
+        │   ├── components/        # Reusable UI widgets
+        │   │   ├── bmi_title_widget.dart
+        │   │   ├── ruler_component.dart
+        │   │   ├── select_gender_widget.dart
+        │   │   ├── select_height_widget.dart
+        │   │   └── weight_age_widget.dart
+        │   └── bmi_screen.dart    # Main input screen
+        ├── BML_details/           # Results Screen
+        │   ├── bmi_details_screen.dart
+        │   └── bmi_info_model.dart
+        └── statemanagement/       # State Logic (Riverpod Providers)
+            ├── calculate_bmi_provider.dart
+            ├── get_bmi_height_provider.dart
+            ├── select_bim_gender.dart
+            └── providers.dart     # Combined provider exports
+```
+## Features
+
+- **Splash Screen**: A welcoming screen on app launch.
+- **Gender Selection**: Choose between Male and Female.
+- **Interactive Input**: Sleek ruler-style selector for height.
+- **Real-time Calculation**: BMI is calculated and displayed instantly.
+- **Visual BMI Analysis**: Color-coded results with immediate visual feedback on your health status.
+- **Health Categorization**: Automatic classification into standard BMI categories:
+  - 🟢 **Underweight** (Blue) - BMI < 18.5
+  - 🟢 **Normal weight** (Green) - BMI 18.5 - 24.9
+  - 🟡 **Overweight** (Yellow) - BMI 25 - 29.9
+  - 🔴 **Obesity** (Red) - BMI ≥ 30
+- **Detailed Results Screen**: View your BMI score, category, color indicator, and get personalized health information.
+- **State Management**: Efficiently managed using Provider state menegement implementaition
+
+## App Screens:
+
+
+<table>
+   <tr>
+    <td align="center"><b>Spalsh Screen</b></td>
+    <td align="center"><b>Main Screen</b></td>
+    <td align="center"><b>Details screen</b></td>
+  </tr>
+  
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/794f28f4-2e30-41e9-8237-e229cf179e3e?raw=true" alt="Screen" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/c1a3b379-2d6b-4996-a90b-62e9c06165a9?raw=true" alt="Screen" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/66a46ae2-997c-4e72-a400-479308d15f87?raw=true" alt="Screen" width="250"/></td>
+  </tr>
+ 
+
+</table>
