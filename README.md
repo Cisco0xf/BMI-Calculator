@@ -77,10 +77,15 @@ lib/
   </tr>
   
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/794f28f4-2e30-41e9-8237-e229cf179e3e?raw=true" alt="Screen" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/c1a3b379-2d6b-4996-a90b-62e9c06165a9?raw=true" alt="Screen" width="250"/></td>
-    <td><img src="https://github.com/user-attachments/assets/66a46ae2-997c-4e72-a400-479308d15f87?raw=true" alt="Screen" width="250"/></td>
+    <td><img src="https://github.com/Cisco0xf/BMI-Calculator/blob/main/bmi_screens/1.webp?raw=true" alt="Screen" width="250"/></td>
+    <td><img src="https://github.com/Cisco0xf/BMI-Calculator/blob/main/bmi_screens/2.webp?raw=true" alt="Screen" width="250"/></td>
+    <td><img src="https://github.com/Cisco0xf/BMI-Calculator/blob/main/bmi_screens/3.webp?raw=true" alt="Screen" width="250"/></td>
   </tr>
  
 
 </table>
+
+
+## License
+MIT © Mahmoud Nagy
+
